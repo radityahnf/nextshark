@@ -1,16 +1,13 @@
 import Image from "next/image";
 import { RxAvatar } from "react-icons/rx";
 import useRandomNews from "@/hooks/useRandomNews";
-import { useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export default function TopStory() {
   const { article, loading, error, fetchRandomNews } = useRandomNews();
 
-  useEffect(() => {
-    fetchRandomNews();
-  }, []);
+  
 
   const timeSincePublished = (publishedAt) => {
     const publicationDate = new Date(publishedAt);

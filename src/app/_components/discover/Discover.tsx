@@ -1,6 +1,5 @@
-// Discover.js
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CategoryContent from "./CategoryContent"; // Import the new component
+import CategoryContent from "./CategoryContent";
 
 export default function Discover() {
   return (

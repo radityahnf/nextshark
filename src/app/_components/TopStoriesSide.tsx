@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import useFetchAllNews from "@/hooks/useAllNews";
 import { Separator } from "@/components/ui/separator";
 
@@ -8,9 +8,7 @@ export default function TopStoriesSide() {
   const { news, loading, error, fetchAllNews } = useFetchAllNews();
   const [visibleCount, setVisibleCount] = useState(5);
 
-  useEffect(() => {
-    fetchAllNews();
-  }, []);
+  
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -42,7 +40,7 @@ export default function TopStoriesSide() {
               orientation="horizontal"
               className="w-100 bg-black/20 h-[1px] my-6"
             />
-          <Link key={index} href={article.url}>
+          <Link key={article.title ||index} href={article.url}>
           <div className="flex flex-row items-center mb-4">
             <div className="mr-4 relative w-40 max-w-40 h-40 max-h-40 min-w-40">
               <Image
