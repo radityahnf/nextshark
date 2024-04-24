@@ -5,7 +5,7 @@ import useFetchAllNews from "@/hooks/useAllNews";
 import { Separator } from "@/components/ui/separator";
 
 export default function TopStoriesSide() {
-  const { news, loading, error, fetchAllNews } = useFetchAllNews();
+  const { news, loading, error } = useFetchAllNews();
   const [visibleCount, setVisibleCount] = useState(5);
 
   
@@ -35,12 +35,12 @@ export default function TopStoriesSide() {
   return (
     <div className="overflow-y-auto max-h-[800px] mt-10">
       {news!.articles.slice(0, visibleCount).map((article, index) => (
-        <div>
+        <div key={article.title || index}>
           <Separator
               orientation="horizontal"
               className="w-100 bg-black/20 h-[1px] my-6"
             />
-          <Link key={article.title ||index} href={article.url}>
+          <Link href={article.url}>
           <div className="flex flex-row items-center mb-4">
             <div className="mr-4 relative w-40 max-w-40 h-40 max-h-40 min-w-40">
               <Image
