@@ -59,7 +59,7 @@ function CategoryContent({ category }: { category: string }) {
               className="w-100 bg-black/20 h-[1px] my-4"
             />
             <div className="flex flex-row items-center ">
-              <div className="mr-4 relative w-100 max-w-100 h-40 max-h-40 min-w-100">
+              <div className="mr-4 relative lg:w-100 lg:max-w-100 lg:h-40 lg:max-h-40 lg:min-w-100 w-40 max-w-40 h-40 max-h-40 min-w-40">
                 <Image
                   alt={article.description || "Image description not available"}
                   src={article.urlToImage}
@@ -89,7 +89,7 @@ function CategoryContent({ category }: { category: string }) {
       {visibleCount < (news?.articles.length || 0) && (
         <button
           onClick={handleShowMore}
-          className="px-4 py-2 mt-4 w-full bg-white text-black border-2 rounded-md hover:bg-black hover:text-white"
+          className="px-4 py-2 mb-4 mt-4 w-full bg-white text-black border-2 rounded-md hover:bg-black hover:text-white"
         >
           Show More
         </button>

@@ -48,7 +48,6 @@
           transition: 0.3s ease-in-out;
       }
   
-    /* adding active class to the bars  */
     .hamburger.active .bar:nth-child(2){
       opacity: 0;
     }

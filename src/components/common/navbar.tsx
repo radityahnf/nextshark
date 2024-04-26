@@ -2,13 +2,10 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 export default function Navbar() {
-  // adding the states
   const [isActive, setIsActive] = useState(false);
-  //add the active class
   const toggleActiveClass = () => {
     setIsActive(!isActive);
   };
-  //clean up function to remove the active class
   const removeActive = () => {
     setIsActive(false);
   };

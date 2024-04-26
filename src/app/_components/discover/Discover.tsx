@@ -3,7 +3,7 @@ import CategoryContent from "./CategoryContent";
 
 export default function Discover() {
   return (
-    <div className="flex flex-col mx-[150px] my-[20px]">
+    <div className="flex flex-col lg:mx-[150px] mx-[20px] my-[20px]">
       <div className="mb-[40px]">
         <h1 className="mb-[10px] text-[28px]">Discover by Category</h1>
         <div className=" h-[3px] w-[89px] bg-gradient-to-r from-primaryOrange to-primaryPurple "></div>
