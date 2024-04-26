@@ -3,6 +3,7 @@ import { RxAvatar } from "react-icons/rx";
 import useRandomNews from "@/hooks/useRandomNews";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Conversation from "./Conversation";
 
 export default function TopStory() {
   const { article, loading, error, fetchRandomNews } = useRandomNews();
@@ -86,8 +87,12 @@ export default function TopStory() {
 
       <Separator
         orientation="horizontal"
-        className="w-100 bg-black/20 h-[1px]"
+        className="w-100 bg-black/20 h-[1px] mb-[30px]"
       />
+
+      <Conversation />
+
+      
     </div>
   );
 }
