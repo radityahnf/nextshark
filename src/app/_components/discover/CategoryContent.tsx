@@ -59,7 +59,7 @@ function CategoryContent({ category }: { category: string }) {
               className="w-100 bg-black/20 h-[1px] my-4"
             />
             <div className="flex flex-row items-center ">
-              <div className="mr-4 relative lg:w-100 lg:max-w-100 lg:h-40 lg:max-h-40 lg:min-w-100 w-40 max-w-40 h-40 max-h-40 min-w-40">
+              <div className="mr-4 relative lg:w-100 lg:max-w-100 lg:h-40 lg:max-h-40 lg:min-w-100 w-40 h-40 max-h-40 min-w-40">
                 <Image
                   alt={article.description || "Image description not available"}
                   src={article.urlToImage}
